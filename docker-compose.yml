@@ -1,29 +1,29 @@
 version: '3'
 services:
 
-  prime-speaker-server:
-    image: prime-speaker-server
-    container_name: prime-speaker-server
+  speaker-server:
+    image: speaker-server
+    container_name: speaker-server
     build:
-      context: ../prime-speaker-service/prime-speaker-server
+      context: ../speaker-server
       dockerfile: Dockerfile
     ports:
-      - 8001:80
+      - 8001:8000
     networks:
       - proxy
 
-  prime-speaker:
-    image: prime-speaker
-    container_name: prime-speaker
+  speaker:
+    image: speaker
+    container_name: speaker
     build:
-      context: ../prime-speaker-service/prime-speaker
+      context: ../speaker
       dockerfile: Dockerfile
     ports:
       - 3001:80
     networks:
       - proxy
     depends_on:
-      - prime-speaker-server
+      - speaker-server
 
   proxy:
     image: proxy
@@ -36,7 +36,7 @@ services:
     networks:
       - proxy
     depends_on:
-      - prime-speaker
+      - speaker
 
 networks:
   proxy:
