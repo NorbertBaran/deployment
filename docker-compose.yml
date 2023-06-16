@@ -8,7 +8,7 @@ services:
       context: ../speaker-server
       dockerfile: Dockerfile
     ports:
-      - 8001:8000
+      - 8001:80
     networks:
       - proxy
 
