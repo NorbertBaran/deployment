@@ -1,30 +1,6 @@
 version: '3'
+
 services:
-
-  speaker-server:
-    image: speaker-server
-    container_name: speaker-server
-    build:
-      context: ../speaker-server
-      dockerfile: Dockerfile
-    ports:
-      - 8001:80
-    networks:
-      - proxy
-
-  speaker:
-    image: speaker
-    container_name: speaker
-    build:
-      context: ../speaker
-      dockerfile: Dockerfile
-    ports:
-      - 3001:80
-    networks:
-      - proxy
-    depends_on:
-      - speaker-server
-
   proxy:
     image: proxy
     container_name: proxy
@@ -35,8 +11,14 @@ services:
       - 80:80
     networks:
       - proxy
+      - speaker
+      - ardigen-github-search
+      - hex-ocean
     depends_on:
       - speaker
 
 networks:
   proxy:
+  speaker:
+  ardigen-github-search:
+  hex-ocean-dishes:
