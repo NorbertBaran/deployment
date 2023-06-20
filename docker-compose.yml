@@ -14,8 +14,6 @@ services:
       - speaker
       - ardigen-github-search
       - hex-ocean-dishes
-    depends_on:
-      - speaker
 
 networks:
   proxy:
