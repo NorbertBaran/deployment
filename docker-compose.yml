@@ -13,7 +13,7 @@ services:
       - proxy
       - speaker
       - ardigen-github-search
-      - hex-ocean
+      - hex-ocean-dishes
     depends_on:
       - speaker
 
