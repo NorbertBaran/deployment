@@ -17,6 +17,10 @@ services:
 
 networks:
   proxy:
+     name: proxy
   speaker:
+    external: true
   ardigen-github-search:
+    external: true
   hex-ocean-dishes:
+    external: true
