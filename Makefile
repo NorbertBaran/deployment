@@ -1,7 +1,7 @@
 clone:
-	git clone https://github.com/NorbertBaran/ardigen-github-search.git
-	git clone https://github.com/NorbertBaran/hex-ocean-dishes.git
-	git clone https://github.com/NorbertBaran/speaker.git
+	git clone https://github.com/NorbertBaran/ardigen-github-search.git ../ardigen-github-search
+	git clone https://github.com/NorbertBaran/hex-ocean-dishes.git ../hex-ocean-dishes
+	git clone https://github.com/NorbertBaran/speaker.git ../speaker
 test:
 	$(MAKE) -C ../ardigen-github-search test
 	$(MAKE) -C ../hex-ocean-dishes test
