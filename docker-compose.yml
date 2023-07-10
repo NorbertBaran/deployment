@@ -14,13 +14,20 @@ services:
       - speaker
       - ardigen-github-search
       - hex-ocean-dishes
+      - portfolio
 
 networks:
   proxy:
      name: proxy
   speaker:
+    name: speaker
     external: true
   ardigen-github-search:
+    name: speaker
     external: true
   hex-ocean-dishes:
+    name: speaker
+    external: true
+  portfolio:
+    name: portfolio
     external: true
