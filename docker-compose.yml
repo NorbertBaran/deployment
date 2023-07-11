@@ -23,10 +23,10 @@ networks:
     name: speaker
     external: true
   ardigen-github-search:
-    name: speaker
+    name: ardigen-github-search
     external: true
   hex-ocean-dishes:
-    name: speaker
+    name: hex-ocean-dishes
     external: true
   portfolio:
     name: portfolio
